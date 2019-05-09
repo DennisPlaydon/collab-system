@@ -36,7 +36,7 @@
         <a href="roles.html" class="list-group-item list-group-item-action bg-light">Roles</a>
         <a href="preview.html" class="list-group-item list-group-item-action bg-light">Preview</a>
       </div>
-      <div class="list-group list-group-flush fixed-bottom">
+      <div class="list-group list-group-flush fixed-bottom" id="bottom-elements">
         <a href="#" class="list-group-item list-group-item-action bg-light">Help</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
       </div>
@@ -47,19 +47,24 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle"">Toggle Menu</button>
+        <button class="btn btn-dark" id="menu-toggle"">
+          Menu <img src="images/menuHamburger.svg" width="20" />
+
+        </button>
 
         <div class=" ml-auto">
           <h1>COLLAB.</h1>
     </div>
     </nav>
     <div class="container-fluid">
-      <h1 class="mt-4">Test</h1>
-      <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
-        larger screens. When toggled using the button below, the menu will change.</p>
-      <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
-        and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
-        menu when clicked.</p>
+      <h1 class="mt-4">Group 5</h1>
+      <p>This is placeholder page. Our 4 pages are:.</p>
+      <ul class="list-group list-group-flush">
+          <li class="list-group-item">Meeting</li>
+          <li class="list-group-item">Tasks</li>
+          <li class="list-group-item">Roles</li>
+          <li class="list-group-item">Preview</li>
+      </ul>
     </div>
   </div>
 
@@ -75,7 +80,7 @@
   <script>
     $("#menu-toggle").click(function (e) {
       e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
+	  $("#wrapper").toggleClass("toggled");
     });
   </script>
 </body>

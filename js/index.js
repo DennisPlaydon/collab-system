@@ -1,33 +1,48 @@
 function toggleMenu() {
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
+  $("#wrapper").toggleClass("toggled");
 }
 
 function openForm(text) {
-  document.getElementById("objective-name").innerHTML=text
-  document.getElementById("myForm").style.display = "block"; /* Element is rendered as a block-level element */
+  document.getElementById("objective-name").innerHTML = text;
+  $("#myForm").show();
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none"; /* Set a <div> element to not be displayed: */
+  $("#myForm").hide();
 }
 
 function openMeetingPopup(text) {
-  document.getElementById("meeting-point").innerHTML=text
-  document.getElementById("meeting-popup").style.display = "block"; /* Element is rendered as a block-level element */
+  document.getElementById("meeting-point").innerHTML = text;
+  document.getElementById("meeting-popup").style.display =
+    "block"; /* Element is rendered as a block-level element */
 }
 
 function closeMeetingPopup() {
-  document.getElementById("meeting-popup").style.display = "none"; /* Set a <div> element to not be displayed: */
+  document.getElementById("meeting-popup").style.display =
+    "none"; /* Set a <div> element to not be displayed: */
 }
 
-function toggleObjectTable(text) {
-  var objectTable = document.getElementById("object-table-1")
-  if (objectTable.style.display == "none") {
-    objectTable.style.display = "block";
+function toggleObjectTable(grid, lock) {
+  var objectTable = $("#" + grid);
+  //   var keyImage = document.getElementById(lock);
+  if (objectTable.css("display") === "none") {
+    objectTable.show();
+    $("#" + lock).attr("src", "images/openLock.svg");
   } else {
-    objectTable.style.display = "none";
+    objectTable.hide();
+    $("#" + lock).attr("src", "images/closedLock.svg");
   }
+}
+
+function openRoleDate() {
+  $("#roles-box").show();
+}
+
+function closeRoleDate() {
+  $("#roles-box").hide();
+}
+
+function roleMeetingBoxColourChange(square) {
+  $("#" + square).css("background-color", "#0AA5CC");
+  $("#" + square).css("border", "none");
 }

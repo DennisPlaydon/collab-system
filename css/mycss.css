@@ -11,23 +11,19 @@ body {
   height: 10rem;
 }
 
-.box {
-  border-radius: 4px;
-  padding-bottom: 100%;
-  border: 1px solid;
-}
-
-.col-lg-2, .col-md-3, .col-xs-6{
-   margin-top: 30px !important;
+.col-lg-2,
+.col-md-3,
+.col-xs-6 {
+  margin-top: 30px !important;
 }
 
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -47,8 +43,43 @@ body {
   margin-left: 0;
 }
 
-#object-table-1 {
+#object-table-2 {
   display: none;
+}
+
+#object-table-3 {
+  display: none;
+}
+
+#object-table-4 {
+  display: none;
+}
+
+.box {
+  border-radius: 6px;
+  padding-bottom: 100%;
+  border: 1px solid black;
+}
+
+.box:hover {
+  opacity: 0.5;
+}
+
+.coloured {
+  background-color: #0dd0ff;
+  border: none;
+}
+
+#small-coloured-box {
+  width: 3rem;
+  height: 3rem;
+  background-color: #0dd0ff;
+  border: none;
+  border-radius: 4px;
+}
+
+.add-meeting:hover {
+  opacity: 0.8;
 }
 
 /* Form popup */
@@ -70,13 +101,13 @@ body {
 
 /* Set a style for the login button */
 .form-container .btn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
 
@@ -86,7 +117,8 @@ body {
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
@@ -105,7 +137,6 @@ body {
   }
 
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -10rem;
+    margin-left: -15rem;
   }
-
 }
