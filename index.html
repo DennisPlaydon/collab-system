@@ -3,89 +3,77 @@
 
 <head>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<title>Collab System</title>
+  <title>Collab System</title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="scripts/mycss.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/mycss.css" rel="stylesheet">
+  <script type="text/javascript" src="index.js"></script>
+
 
 </head>
 
 <body>
-	<div class="wrapper">
-		<!-- Sidebar  -->
-		<nav id="sidebar">
-			<div class="sidebar-header">
-				<h3>Bootstrap Sidebar</h3>
-				<strong>BS</strong>
-			</div>
 
-			<ul class="list-unstyled components">
-				<li class="active">
-					<a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-						<i class="fas fa-home"></i>
-						Home
-					</a>
-					<ul class="collapse list-unstyled" id="homeSubmenu">
-						<li>
-							<a href="#">Home 1</a>
-						</li>
-						<li>
-							<a href="#">Home 2</a>
-						</li>
-						<li>
-							<a href="#">Home 3</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fas fa-briefcase"></i>
-						About
-					</a>
-					<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-						<i class="fas fa-copy"></i>
-						Pages
-					</a>
-					<ul class="collapse list-unstyled" id="pageSubmenu">
-						<li>
-							<a href="#">Page 1</a>
-						</li>
-						<li>
-							<a href="#">Page 2</a>
-						</li>
-						<li>
-							<a href="#">Page 3</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+  <div class="d-flex" id="wrapper">
 
-		</nav>
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading">COLLAB.</div>
+        <div class="list-group list-group-flush">
+          <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+          <a href="meeting.html" class="list-group-item list-group-item-action bg-light">Meeting</a>
+          <a href="tasks.html" class="list-group-item list-group-item-action bg-light">Tasks</a>
+          <a href="roles.html" class="list-group-item list-group-item-action bg-light">Roles</a>
+          <a href="preview.html" class="list-group-item list-group-item-action bg-light">Preview</a>
+        </div>
+        <div class="list-group list-group-flush fixed-bottom">
+          <a href="#" class="list-group-item list-group-item-action bg-light">Help</a>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
+        </div>
+      </div>
+    <!-- /#sidebar-wrapper -->
 
-		<!-- Page Content  -->
-		<div id="content">
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
 
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle" onclick="toggleMenu()">Toggle Menu</button>
 
-					<button type="button" id="sidebarCollapse" class="btn btn-info">
-						<i class="fas fa-align-left"></i>
-						<span>Toggle Sidebar</span>
-					</button>
-				</div>
-			</nav>
-		</div>
-	</div>
-	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div>COLLAB.</div>
+      </nav>
+      
+      <div class="container-fluid">
+        <h1 class="mt-4">Test</h1>
+        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
 
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+     $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    }); 
+  </script>
 </body>
 
 </html>
