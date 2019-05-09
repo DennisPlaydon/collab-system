@@ -3,139 +3,164 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <title>Collab System</title>
+    <title>Collab System</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/mycss.css" rel="stylesheet">
-  <script type="text/javascript" src="index.js"></script>
-
+    <!-- Custom styles for this template -->
+    <link href="css/mycss.css" rel="stylesheet">
+    <script type="text/javascript" src="js/index.js"></script>
 
 </head>
 
 <body>
 
-  <div class="d-flex" id="wrapper">
+    <div class="d-flex" id="wrapper">
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">COLLAB.</div>
-      <div class="list-group list-group-flush">
-        <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
-        <a href="meeting.html" class="list-group-item list-group-item-action bg-light">Meeting</a>
-        <a href="tasks.html" class="list-group-item list-group-item-action bg-light">Tasks</a>
-        <a href="roles.html" class="list-group-item list-group-item-action bg-light">Roles</a>
-        <a href="preview.html" class="list-group-item list-group-item-action bg-light">Preview</a>
-      </div>
-      <div class="list-group list-group-flush fixed-bottom">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Help</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
-      </div>
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">
+                <img src="images/ninja.svg" class="avatar">
+                <button class="btn btn-primary" id="menu-toggle"">Toggle Menu</button>
+        </div>
+        <div class=" list-group list-group-flush">
+                    <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+                    <a href="meeting.html" class="list-group-item list-group-item-action bg-light">Meeting</a>
+                    <a href="tasks.html" class="list-group-item list-group-item-action bg-light">Tasks</a>
+                    <a href="roles.html" class="list-group-item list-group-item-action bg-light">Roles</a>
+                    <a href="preview.html" class="list-group-item list-group-item-action bg-light">Preview</a>
+            </div>
+            <div class="list-group list-group-flush fixed-bottom">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Help</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="ml-auto">
+                    <h1>COLLAB.</h1>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">Tasks</h1>
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <img src="images/folder2.svg" width="150dp">
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <img src="images/folder2.svg" width="150dp">
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <img src="images/folder2.svg" width="150dp">
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <img src="images/folder2.svg" width="150dp">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-3 text-center">
+                        <a href="javascript:toggleObjectTable('object-table-1')" class="tasks-lock">
+                            <img src="images/openLock.svg" width="80dp">
+                        </a>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="javascript:toggleObjectTable('object-table-2')" class="tasks-lock">
+                            <img src="images/closedLock.svg" width="80dp">
+                        </a>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="javascript:toggleObjectTable('object-table-3')" class="tasks-lock">
+                            <img src="images/closedLock.svg" width="80dp">
+                        </a>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <a href="javascript:toggleObjectTable('object-table-4')" class="tasks-lock">
+                            <img src="images/closedLock.svg" width="80dp">
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-3" id="object-table-1">
+                    <div class="col-md-3 text-center">
+                        <ul class="list-group">
+                            <li class="list-group-item" , type="button" onclick="openForm('Objective 1')">
+                                Objective 1
+                                <div class="form-check float-right">
+                                    <input class="form-check-input" type="checkbox" class="inlineCheckbox1"
+                                        value="option1">
+                                </div>
+                            </li>
+                            <li class="list-group-item" , type="button" onclick="openForm('Objective 2')">
+                                Objective 2
+                                <div class="form-check float-right">
+                                    <input class="form-check-input" type="checkbox" class="inlineCheckbox1"
+                                        value="option1">
+                                </div>
+                            </li>
+                            <li class="list-group-item" , type="button" onclick="openForm('Objective 3')">
+                                Objective 3
+                                <div class="form-check float-right">
+                                    <input class="form-check-input" type="checkbox" class="inlineCheckbox1"
+                                        value="option1">
+                                </div>
+                            </li>
+                            <li class="list-group-item" , type="button" onclick="openForm('Objective 4')">
+                                Objective 4
+                                <div class="form-check float-right">
+                                    <input class="form-check-input" type="checkbox" class="inlineCheckbox1"
+                                        value="option1">
+                                </div>
+                            </li>
+                            <li class="list-group-item" , type="button" onclick="openForm('Objective 5')">
+                                Objective 5
+                                <div class="form-check float-right">
+                                    <input class="form-check-input" type="checkbox" class="inlineCheckbox1"
+                                        value="option1">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-popup" id="myForm">
+                <form action="" class="form-container">
+                    <h2 class="text-center" id="objective-name">Objective Placeholder</h2>
+
+                    <label for="email"><b>Description</b></label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed varius lectus. Vivamus
+                        pharetra egestas mi id tempor. Aliquam dolor dui, iaculis sed iaculis eu, interdum sit amet
+                        risus</p>
+
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
     </div>
-    <!-- /#sidebar-wrapper -->
+    <!-- /#wrapper -->
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle" onclick="toggleMenu()">Toggle Menu</button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </nav>
-
-      <div class="container-fluid">
-        <h1 class="mt-4">Tasks</h1>
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <img src="images/folder2.svg" width="150dp">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/folder2.svg" width="150dp">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/folder2.svg" width="150dp">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/folder2.svg" width="150dp">
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-3 text-center">
-                <img src="images/openLock.svg" width="80dp">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/closedLock.svg" width="80dp">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/closedLock.svg" width="80dp">
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="images/closedLock.svg" width="80dp">
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-3 text-center">
-                <ul class="list-group">
-                    <li class="list-group-item", type="button">
-                        Objective 1
-                        <div class="form-check float-right">
-                            <input class="form-check-input" type="checkbox" class="inlineCheckbox1" value="option1">
-                        </div>
-                    </li>
-                    <li class="list-group-item", type="button">
-                        Objective 2
-                        <div class="form-check float-right">
-                            <input class="form-check-input" type="checkbox" class="inlineCheckbox1" value="option1">
-                        </div>
-                    </li>
-                    <li class="list-group-item", type="button">
-                        Objective 3
-                        <div class="form-check float-right">
-                            <input class="form-check-input" type="checkbox" class="inlineCheckbox1" value="option1">
-                        </div>
-                    </li>
-                    <li class="list-group-item", type="button">
-                        Objective 4
-                        <div class="form-check float-right">
-                            <input class="form-check-input" type="checkbox" class="inlineCheckbox1" value="option1">
-                        </div>
-                    </li>
-                    <li class="list-group-item", type="button">
-                        Objective 5
-                        <div class="form-check float-right">
-                            <input class="form-check-input" type="checkbox" class="inlineCheckbox1" value="option1">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-
-  </div>
-  <!-- /#wrapper -->
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-     $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    }); 
-  </script>
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
 </body>
 
 </html>

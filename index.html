@@ -15,7 +15,7 @@
 
   <!-- Custom styles for this template -->
   <link href="css/mycss.css" rel="stylesheet">
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 
 
 </head>
@@ -26,40 +26,44 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading">COLLAB.</div>
-        <div class="list-group list-group-flush">
-          <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
-          <a href="meeting.html" class="list-group-item list-group-item-action bg-light">Meeting</a>
-          <a href="tasks.html" class="list-group-item list-group-item-action bg-light">Tasks</a>
-          <a href="roles.html" class="list-group-item list-group-item-action bg-light">Roles</a>
-          <a href="preview.html" class="list-group-item list-group-item-action bg-light">Preview</a>
-        </div>
-        <div class="list-group list-group-flush fixed-bottom">
-          <a href="#" class="list-group-item list-group-item-action bg-light">Help</a>
-          <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
-        </div>
+      <div class="sidebar-heading text-center">
+        <img src="images/ninja.svg" class="avatar">
       </div>
+      <div class=" list-group list-group-flush">
+        <a href="index.html" class="list-group-item list-group-item-action bg-light">Home</a>
+        <a href="meeting.html" class="list-group-item list-group-item-action bg-light">Meeting</a>
+        <a href="tasks.html" class="list-group-item list-group-item-action bg-light">Tasks</a>
+        <a href="roles.html" class="list-group-item list-group-item-action bg-light">Roles</a>
+        <a href="preview.html" class="list-group-item list-group-item-action bg-light">Preview</a>
+      </div>
+      <div class="list-group list-group-flush fixed-bottom">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Help</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light">Logout</a>
+      </div>
+    </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle" onclick="toggleMenu()">Toggle Menu</button>
+        <button class="btn btn-primary" id="menu-toggle"">Toggle Menu</button>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div>COLLAB.</div>
-      </nav>
-      
-      <div class="container-fluid">
-        <h1 class="mt-4">Test</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
-      </div>
+        <div class=" ml-auto">
+          <h1>COLLAB.</h1>
     </div>
-    <!-- /#page-content-wrapper -->
+    </nav>
+    <div class="container-fluid">
+      <h1 class="mt-4">Test</h1>
+      <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
+        larger screens. When toggled using the button below, the menu will change.</p>
+      <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional,
+        and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the
+        menu when clicked.</p>
+    </div>
+  </div>
+
+  <!-- /#page-content-wrapper -->
 
   </div>
   <!-- /#wrapper -->
@@ -69,10 +73,10 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script>
-     $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
-    }); 
+    });
   </script>
 </body>
 
