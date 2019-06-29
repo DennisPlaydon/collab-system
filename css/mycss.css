@@ -3,8 +3,13 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
- body {
+body {
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .avatar {
